@@ -17,10 +17,6 @@ const router = useRouter()
 .home-container{
   width: 100%;
   height: 100%;
-  background-color: #fffbf5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
