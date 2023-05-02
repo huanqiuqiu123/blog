@@ -95,6 +95,7 @@ const nextMonth = () => {
   border-radius: 12px;
   background-color: #fff;
   box-shadow: 0 0 4px #f5f5f5, 0 0 8px #f5f5f5;
+  min-width: 250px;
 
   .title {
     display: flex;
