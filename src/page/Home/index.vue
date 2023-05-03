@@ -4,7 +4,6 @@ import {ref} from "vue";
 import {TabType} from "@/page/Home/type";
 import {getTabData} from "@/page/Home/data";
 import {Icon} from "@vicons/utils";
-import CalendarCard from "@/components/CalendarCard/index.vue";
 
 
 const router = useRouter()
@@ -14,13 +13,16 @@ let email = ref<string>("2364521714@qq.com")
 
 let tabs: Array<TabType> = getTabData(router)
 
+const navToMain = () => {
+    router.push("/main")
+}
 
 </script>
 
 <template>
     <div class="home-container">
         <div class="left">
-            <div class="logo-container">
+            <div class="logo-container" @click="navToMain">
                 <div class="logo">
                     <n-gradient-text type="info">
                         SY
@@ -68,12 +70,8 @@ let tabs: Array<TabType> = getTabData(router)
 
             </div>
         </div>
-        <div class="body"></div>
         <div class="right">
-
-            <div style="width: 250px">
-                <CalendarCard/>
-            </div>
+            <router-view/>
         </div>
 
     </div>
@@ -98,13 +96,14 @@ let tabs: Array<TabType> = getTabData(router)
     border-right: 2px solid;
     border-image: linear-gradient(#f2f2f299 20%, #fff 50%) 2 2 2 2;
     //background-image: linear-gradient(to top right, #d299c255 0%, #fef9d755 20%);
-    background-image: linear-gradient(30deg, #96fbc4 0%, #f9f586 8%,#fff 15%);
+    background-image: linear-gradient(30deg, #96fbc4 0%, #f9f586 8%, #fff 15%);
 
     .logo-container {
       display: flex;
       align-items: baseline;
       margin-top: 24px;
       padding: 0 48px;
+      cursor: pointer;
 
       .logo {
         font-size: 2rem;

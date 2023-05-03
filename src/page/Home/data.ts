@@ -1,6 +1,6 @@
 import {TabType} from "@/page/Home/type";
 import {Router} from "vue-router";
-import {Add, Search, AccessibilityOutline, SettingsOutline} from '@vicons/ionicons5'
+import {Add, Search, AccessibilityOutline, SettingsOutline,Pencil} from '@vicons/ionicons5'
 export const getTabData = (router: Router): Array<TabType> => {
     return [
         {
@@ -14,6 +14,11 @@ export const getTabData = (router: Router): Array<TabType> => {
                 {
                     title: "探索", icon: Search, path: "/blog/explore", onClick: () => {
                         router.push("/blog/explore")
+                    }
+                },
+                {
+                    title:"创作中心",icon:Pencil,path:"/blog/center",onClick:()=>{
+                        router.push("/blog/center")
                     }
                 }
 
