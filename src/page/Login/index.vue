@@ -57,7 +57,7 @@
 import {onMounted, ref} from "vue";
 import {useRouter} from "vue-router";
 import {useMessage} from "naive-ui"
-import {loginReq} from "@/api/user";
+import {postLogin} from "@/api/user";
 
 const router = useRouter()
 const message = useMessage()
@@ -89,7 +89,7 @@ const login = async () => {
     if (!!accountInput && accountInput.length !== 0) {
         let passwordInput = password.value.trim()
         if (!!passwordInput && passwordInput.length !== 0) {
-            let res = await loginReq({account: accountInput, password: passwordInput})
+            let res = await postLogin({account: accountInput, password: passwordInput})
             if (res.data.code === 200) {
                 window.localStorage.setItem("token", res.data.data.token)
                 if (isRememberAccountChecked.value) {

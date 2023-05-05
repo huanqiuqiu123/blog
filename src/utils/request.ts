@@ -1,6 +1,6 @@
-import axios, {AxiosInstance, InternalAxiosRequestConfig} from 'axios'
+import axios, {AxiosInstance} from 'axios'
 
 const request: AxiosInstance = axios.create({
-    baseURL: 'http://localhost:7777/'
+    baseURL: import.meta.env.VITE_BASE_URL
 })
 export default request

@@ -21,7 +21,7 @@
         "src/*"
       ]
     },
-    "types": ["naive-ui/volar"]
+    "types": ["naive-ui/volar","node"]
   },
   "include": [
     "src/**/*.ts",

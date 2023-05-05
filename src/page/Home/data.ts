@@ -8,17 +8,17 @@ export const getTabData = (router: Router): Array<TabType> => {
             items: [
                 {
                     title: "创建", icon: Add, path: "/blog/create", onClick: () => {
-                        router.push("/blog/create")
+                        router.push("/article/create")
                     }
                 },
                 {
                     title: "探索", icon: Search, path: "/blog/explore", onClick: () => {
-                        router.push("/blog/explore")
+                        router.push("/article/explore")
                     }
                 },
                 {
                     title:"创作中心",icon:Pencil,path:"/blog/center",onClick:()=>{
-                        router.push("/blog/center")
+                        router.push("/article/center")
                     }
                 }
 

@@ -137,9 +137,10 @@ const navToMain = () => {
       display: flex;
       flex-direction: column;
       width: fit-content;
+      //margin-top: 12px;
 
       .tab-group-item {
-        margin-top: 24px;
+        margin-top: 28px;
 
         .dividing-line {
           border: 1px solid;
@@ -148,6 +149,7 @@ const navToMain = () => {
 
         .tab-group-item-title {
           margin-top: 16px;
+          margin-bottom: 12px;
           font-size: 1.1rem;
           font-weight: 800;
           color: #5f5f5f;
@@ -197,6 +199,10 @@ const navToMain = () => {
 
 
     }
+  }
+
+  .right{
+    flex: 1;
   }
 
 }

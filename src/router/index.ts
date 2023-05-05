@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
+import {createRouter, createWebHistory, Router, RouteRecordRaw} from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
     {
@@ -12,13 +12,13 @@ const routes: Array<RouteRecordRaw> = [
                 component: () => import("@/page/Home/Main/index.vue")
             },
             {
-                path: "blog",
-                name: "Blog",
+                path: "article",
+                name: "Article",
                 children: [
                     {
                         path: "create",
                         name: "Create",
-                        component: () => import("@/page/Blog/Create/index.vue")
+                        component: () => import("@/page/Article/Create/index.vue")
                     }
                 ]
             }
@@ -37,7 +37,7 @@ const routes: Array<RouteRecordRaw> = [
     },
 ]
 
-const router = createRouter({
+const router: Router = createRouter({
     history: createWebHistory(),
     routes: routes
 })

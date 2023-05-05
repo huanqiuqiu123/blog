@@ -75,7 +75,7 @@ import {ref} from "vue";
 import {Router, useRouter} from "vue-router";
 import {useMessage} from "naive-ui"
 import HelpIcon from "@/components/HelpIcon/index.vue";
-import {registerReq, sendCodeReq} from "@/api/user";
+import {postRegister, postSendCode} from "@/api/user";
 
 
 const router: Router = useRouter()
@@ -100,7 +100,7 @@ const sendCode = async () => {
         message.error("请输入正确的邮箱格式")
         return
     } else {
-        let res = await sendCodeReq({email: emailInput})
+        let res = await postSendCode({email: emailInput})
         if (res.data.code === 200) {
             window.localStorage.setItem("codeToken", res.data.data.token)
             message.success(res.data.msg)
@@ -143,7 +143,7 @@ const register = async () => {
             //验证成功
             let codeToken = window.localStorage.getItem("codeToken")
             if (codeToken) {
-                let res = await registerReq({
+                let res = await postRegister({
                     email: emailInput,
                     password: passwordInput,
                     code: code.value.trim()

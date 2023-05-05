@@ -1,6 +1,6 @@
 import request from "@/utils/request";
 
-export const loginReq = (data: {account:string,password:string}) => {
+export const postLogin = (data: {account:string,password:string}) => {
     return request({
         url: "/user/login",
         method: "POST",
@@ -8,7 +8,7 @@ export const loginReq = (data: {account:string,password:string}) => {
     })
 }
 
-export const registerReq = (data: { email: string, password: string, code: string }, headers: { token: string }) => {
+export const postRegister = (data: { email: string, password: string, code: string }, headers: { token: string }) => {
     return request({
         url: "/user/register",
         method: "POST",
@@ -17,7 +17,7 @@ export const registerReq = (data: { email: string, password: string, code: strin
     })
 }
 
-export const sendCodeReq = (data: { email: string }) => {
+export const postSendCode = (data: { email: string }) => {
     return request({
         url: "/user/send_code",
         method: "POST",
