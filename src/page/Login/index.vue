@@ -2,10 +2,9 @@
     <div class="login_container">
         <div class="login-main">
             <div class="left">
-                <div class="title">
-                    <div class="title-left">HQ</div>
-                    <div class="title-right">BLOG</div>
-                </div>
+                <n-gradient-text class="title" gradient="linear-gradient(to right, #fa709a 0%, #fee140 100%)">
+                    {{ logo }} BLOG
+                </n-gradient-text>
                 <div class="form">
                     <div class="form-title">登陆您的账户</div>
                     <div class="form-body">
@@ -66,6 +65,7 @@ let isAutoLoginChecked = ref<boolean>(false)
 let isRememberAccountChecked = ref<boolean>(false)
 let account = ref<string>("")
 let password = ref<string>("")
+let logo = import.meta.env.VITE_LOGO
 
 onMounted(() => {
     isAutoLoginChecked.value = (window.localStorage.getItem("isAutoLogin") ? !!window.localStorage.getItem("isAutoLogin") : false)

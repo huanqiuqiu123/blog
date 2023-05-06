@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {useRouter} from "vue-router";
 import {ref} from "vue";
-import {TabType} from "@/page/Home/type";
+import {TabType} from "@/type/tabType"
 import {getTabData} from "@/page/Home/data";
 import {Icon} from "@vicons/utils";
 

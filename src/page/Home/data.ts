@@ -1,4 +1,4 @@
-import {TabType} from "@/page/Home/type";
+import {TabType} from "@/type/tabType";
 import {Router} from "vue-router";
 import {Add, Search, AccessibilityOutline, SettingsOutline,Pencil} from '@vicons/ionicons5'
 export const getTabData = (router: Router): Array<TabType> => {

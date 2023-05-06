@@ -6,10 +6,9 @@
                 </div>
             </div>
             <div class="right">
-                <div class="title">
-                    <div class="title-left">HQ</div>
-                    <div class="title-right">BLOG</div>
-                </div>
+                <n-gradient-text class="title" gradient="linear-gradient(to right, #fa709a 0%, #fee140 100%)">
+                    {{ logo }} BLOG
+                </n-gradient-text>
                 <div class="form">
                     <div class="form-title">创建您的账户</div>
                     <div class="form-body">
@@ -77,6 +76,7 @@ import {useMessage} from "naive-ui"
 import HelpIcon from "@/components/HelpIcon/index.vue";
 import {postRegister, postSendCode} from "@/api/user";
 
+let logo = import.meta.env.VITE_LOGO
 
 const router: Router = useRouter()
 const message = useMessage()
