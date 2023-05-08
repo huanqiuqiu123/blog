@@ -92,6 +92,7 @@ const login = async () => {
             let res = await postLogin({account: accountInput, password: passwordInput})
             if (res.data.code === 200) {
                 window.localStorage.setItem("token", res.data.data.token)
+                console.log(window.localStorage.getItem("token"))
                 if (isRememberAccountChecked.value) {
                     window.localStorage.setItem("account", accountInput)
                     window.localStorage.setItem("password", passwordInput)
